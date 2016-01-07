@@ -1,12 +1,17 @@
 <html>
   <head>
-    <title>Angular 2 QuickStart</title>
+    <title>Freedom</title>
+    <base href="/">
+    <link rel="icon" href="assets/images/home.png">
     <link href="app/styles/app.css" rel="stylesheet"/>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
     <script>
       System.config({
         packages: {
@@ -21,6 +26,6 @@
     </script>
   </head>
   <body>
-    <my-app>Loading...</my-app>
+    <app>Loading...</app>
   </body>
 </html>

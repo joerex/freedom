@@ -1,4 +1,6 @@
-import {Component} from 'angular2/core';
+import {Component, ElementRef} from 'angular2/core';
+import {Router, ComponentInstruction} from 'angular2/router';
+import {Observable} from 'rxjs/Rx';
 
 @Component({
     selector: 'load',
@@ -14,32 +16,58 @@ import {Component} from 'angular2/core';
 })
 
 export class Load {
-  public percLoaded : number;
-  public totalSize : number;
-  public numLoaded : number;
-  public assets : Object[];
+  percLoaded : number;
+  totalSize : number;
+  numLoaded : number;
+  assets : Object[];
 
-  constructor() {
+
+  constructor( public _router : Router, public elem : ElementRef ) {
     this.assets = [
       {
-        uri: 'assets/loading-screen.jpg',
+        uri: 'assets/images/loading-screen.jpg',
         type: 'image',
         size: 60
       },
       {
-        uri: 'assets/jumbotron.png',
+        uri: 'assets/images/globatron/GLOBATRON_SCOREBOARD.png',
         type: 'image',
         size: 456
       },
       {
-        uri: 'assets/stadium-top.jpg',
+        uri: 'assets/images/globatron/GLOBATRON_WALL_Top.png',
         type: 'image',
         size: 1800
       },
       {
-        uri: 'assets/video/jumbotron-frame.mp4',
+        uri: 'assets/images/globatron/GLOBATRON_WALL.jpg',
+        type: 'image',
+        size: 1800
+      },
+      {
+        uri: 'assets/video/Globatron_Vid_1_Final.mp4',
         type: 'video',
         size: 12800
+      },
+      {
+        uri: 'assets/video/Background_Sky_Final.mp4',
+        type: 'video',
+        size: 3300
+      },
+      {
+        uri: 'assets/video/intro.mp4',
+        type: 'video',
+        size: 4400
+      },
+      {
+        uri: 'assets/video/Audience_Loop_Final_2.mp4',
+        type: 'video',
+        size: 3700
+      },
+      {
+        uri: 'assets/video/STOCK_TICKER_LOOP_FINAL.mp4',
+        type: 'video',
+        size: 4000
       }
 
     ];
@@ -63,7 +91,6 @@ export class Load {
   }
 
   loadFiles() {
-    // save context
     var _this = this;
     // load assets
     this.assets.forEach(function(asset) {
@@ -74,6 +101,9 @@ export class Load {
         img.onload = function() {
           _this.numLoaded++;
           _this.percLoaded += asset.perc;
+          if (_this.numLoaded === _this.assets.length) {
+            setTimeout(function() { _this.finish() }, 1000);
+          }
           //console.log(thisapp.percLoaded);
         };
         img.src = asset.uri;
@@ -88,12 +118,30 @@ export class Load {
         video.addEventListener('loadeddata', function() {
           _this.numLoaded++;
           _this.percLoaded += asset.perc;
+          if (_this.numLoaded === _this.assets.length) {
+            setTimeout(function() { _this.finish() }, 1000);
+          }
           //console.log(thisapp.percLoaded);
         }, false);
       	video.src = asset.uri;
       	video.load();
       }
     });
+  }
+
+  finish() {
+    var event = document.createEvent('Event');
+    event.initEvent('setForIntro', true, true);
+    this.elem.nativeElement.dispatchEvent(event);
+    this._router.navigate( ['Intro'] );
+  }
+
+  routerOnActivate(next: ComponentInstruction, prev: ComponentInstruction) {
+    return Observable.of(true).delay(100).toPromise();
+  }
+
+  routerOnDeactivate(next: ComponentInstruction, prev: ComponentInstruction) {
+    return Observable.of(true).delay(200).toPromise();
   }
 
 }
