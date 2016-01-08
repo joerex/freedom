@@ -35,7 +35,7 @@ System.register(['angular2/core', 'rxjs/Rx'], function(exports_1) {
                 Audience = __decorate([
                     core_1.Component({
                         selector: 'audience',
-                        template: " <div id=\"audience\">\n                  <video id=\"aud-vid\" width=\"100%\" height=\"100%\" autoplay loop>\n                    <source src=\"assets/video/Audience_Loop_Final_2.mp4\" type=\"video/mp4\">\n                  </video>\n                  <audio id=\"aud-audio\" autoplay loop>\n                    <source src=\"assets/audio/Audience_Audio_Final.ogg\" type=\"audio/ogg\" />\n                    <source src=\"assets/audio/Audience_Audio_Final.mp3\" type=\"audio/mpeg\" />\n                  </audio>\n                </div>\n              "
+                        template: " <div id=\"audience\">\n                  <video id=\"aud-vid\" width=\"100%\" height=\"100%\" autoplay loop>\n                    <source src=\"http://jdreckley.cachefly.net/freedom/assets/video/Audience_Loop_Final_2.mp4\" type=\"video/mp4\">\n                  </video>\n                  <audio id=\"aud-audio\" autoplay loop>\n                    <source src=\"http://jdreckley.cachefly.net/freedom/assets/audio/Audience_Audio_Final.ogg\" type=\"audio/ogg\" />\n                    <source src=\"http://jdreckley.cachefly.net/freedom/assets/audio/Audience_Audio_Final.mp3\" type=\"audio/mpeg\" />\n                  </audio>\n                </div>\n              "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], Audience);

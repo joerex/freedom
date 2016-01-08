@@ -119,17 +119,17 @@ audience + #background, map + #background {
         border-radius: 20px;
         box-shadow: 0 0 40px black; }
         #header .navbar ul li a.home {
-          background-image: url(../../assets/images/home-trans.png);
+          background-image: url(http://jdreckley.cachefly.net/freedom/assets/images/home-trans.png);
           background-color: rgba(0, 0, 0, 0.8); }
           #header .navbar ul li a.home:hover, #header .navbar ul li a.home.active {
             background-color: #900808; }
         #header .navbar ul li a.audience {
-          background-image: url(../../assets/images/audience-trans.png);
+          background-image: url(http://jdreckley.cachefly.net/freedom/assets/images/audience-trans.png);
           background-color: rgba(0, 0, 0, 0.8); }
           #header .navbar ul li a.audience:hover, #header .navbar ul li a.audience.active {
             background-color: #900808; }
         #header .navbar ul li a.map {
-          background-image: url(../../assets/images/map-trans.png);
+          background-image: url(http://jdreckley.cachefly.net/freedom/assets/images/map-trans.png);
           background-color: rgba(0, 0, 0, 0.8); }
           #header .navbar ul li a.map:hover, #header .navbar ul li a.map.active {
             background-color: #900808; }
@@ -138,7 +138,7 @@ audience + #background, map + #background {
   overflow: auto;
   width: 100%;
   height: 100%;
-  background: url(../../assets/images/loading-screen.jpg) no-repeat center center; }
+  background: url(http://jdreckley.cachefly.net/freedom/assets/loading-screen.jpg) no-repeat center center; }
   #load-screen .container {
     position: relative;
     top: 50%; }
@@ -169,7 +169,7 @@ audience + #background, map + #background {
   padding: 0;
   overflow: auto;
   box-sizing: border-box;
-  background-image: url(../../assets/images/globatron/GLOBATRON_SCOREBOARD.png), url(../../assets/images/globatron/GLOBATRON_WALL_Top.png), url(../../assets/images/globatron/GLOBATRON_WALL.jpg);
+  background-image: url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png), url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL_Top.png), url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL.jpg);
   background-repeat: no-repeat, repeat-x, repeat-x;
   background-size: 871px, 1590px auto, 1590px auto;
   background-position: center 112px, center 521px, center 526px;
@@ -251,7 +251,7 @@ audience + #background, map + #background {
 #map-wrapper {
   height: 100%;
   overflow: auto;
-  background: url(../../assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
+  background: url(http://jdreckley.cachefly.net/freedom/assets/assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
   background-size: 1540px;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;

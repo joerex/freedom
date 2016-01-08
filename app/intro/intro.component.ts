@@ -28,7 +28,7 @@ export class Intro {
       elem.nativeElement.dispatchEvent(event);
       _app._router.navigate( ['Scoreboard'] );
     });
-    this.src = 'assets/video/intro.mp4';
+    this.src = 'http://jdreckley.cachefly.net/freedom/assets/video/intro.mp4';
   }
 
   routerOnActivate(next: ComponentInstruction, prev: ComponentInstruction) {

@@ -165,7 +165,7 @@ audience, map {
           box-shadow: 0 0 40px rgba(0,0,0,1);
 
           &.home {
-            background-image:url(../../assets/images/home-trans.png);
+            background-image:url(http://jdreckley.cachefly.net/freedom/assets/images/home-trans.png);
             background-color: rgba(0,0,0,.8);
 
             &:hover , &.active {
@@ -174,7 +174,7 @@ audience, map {
           }
 
           &.audience {
-            background-image:url(../../assets/images/audience-trans.png);
+            background-image:url(http://jdreckley.cachefly.net/freedom/assets/images/audience-trans.png);
             background-color: rgba(0,0,0,.8);
 
             &:hover, &.active {
@@ -183,7 +183,7 @@ audience, map {
           }
 
           &.map {
-            background-image:url(../../assets/images/map-trans.png);
+            background-image:url(http://jdreckley.cachefly.net/freedom/assets/images/map-trans.png);
             background-color: rgba(0,0,0,.8);
 
             &:hover, &.active {
@@ -200,7 +200,7 @@ audience, map {
   overflow:auto;
   width:100%;
   height:100%;
-  background:url(../../assets/images/loading-screen.jpg) no-repeat center center;
+  background:url(http://jdreckley.cachefly.net/freedom/assets/loading-screen.jpg) no-repeat center center;
 
   .container {
     position:relative;
@@ -245,9 +245,9 @@ audience, map {
   overflow:auto;
   box-sizing: border-box;
   background-image:
-    url(../../assets/images/globatron/GLOBATRON_SCOREBOARD.png),
-    url(../../assets/images/globatron/GLOBATRON_WALL_Top.png),
-    url(../../assets/images/globatron/GLOBATRON_WALL.jpg);
+    url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png),
+    url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL_Top.png),
+    url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL.jpg);
   background-repeat:
     no-repeat,
     repeat-x,
@@ -367,7 +367,7 @@ audience, map {
 #map-wrapper {
   height:100%;
   overflow:auto;
-  background:url(../../assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
+  background:url(http://jdreckley.cachefly.net/freedom/assets/assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
   background-size:1540px;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;

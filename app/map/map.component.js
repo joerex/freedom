@@ -48,7 +48,7 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                         var marker = new google.maps.Marker({
                             position: new google.maps.LatLng(this.data.lastLat, this.data.lastLon),
                             map: map,
-                            icon: 'assets/images/marker.png'
+                            icon: 'http://jdreckley.cachefly.net/freedom/assets/images/marker.png'
                         });
                     }
                 };
@@ -61,7 +61,7 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                 Map = __decorate([
                     core_1.Component({
                         selector: 'map',
-                        template: "\n      <div id=\"map-wrapper\">\n        <div id=\"map\"></div>\n        <div id=\"info\">\n          <p>\n            {{data.mapTicker}}\n          </p>\n        </div>\n        <audio id=\"map-audio\" autoplay loop>\n          <source src=\"assets/audio/Overhead_Stadium_Audio_Final.ogg\" type=\"audio/ogg\" />\n          <source src=\"assets/audio/Overhead_Stadium_Audio_Final.mp3\" type=\"audio/mpeg\" />\n        </audio>\n      </div>\n    "
+                        template: "\n      <div id=\"map-wrapper\">\n        <div id=\"map\"></div>\n        <div id=\"info\">\n          <p>\n            {{data.mapTicker}}\n          </p>\n        </div>\n        <audio id=\"map-audio\" autoplay loop>\n          <source src=\"http://jdreckley.cachefly.net/freedom/assets/audio/Overhead_Stadium_Audio_Final.ogg\" type=\"audio/ogg\" />\n          <source src=\"http://jdreckley.cachefly.net/freedom/assets/audio/Overhead_Stadium_Audio_Final.mp3\" type=\"audio/mpeg\" />\n        </audio>\n      </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [data_service_1.DataService])
                 ], Map);

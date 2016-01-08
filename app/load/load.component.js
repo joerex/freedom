@@ -28,42 +28,42 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                     this.elem = elem;
                     this.assets = [
                         {
-                            uri: 'assets/images/globatron/GLOBATRON_SCOREBOARD.png',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png',
                             type: 'image',
                             size: 456
                         },
                         {
-                            uri: 'assets/images/globatron/GLOBATRON_WALL_Top.png',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL_Top.png',
                             type: 'image',
                             size: 1800
                         },
                         {
-                            uri: 'assets/images/globatron/GLOBATRON_WALL.jpg',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL.jpg',
                             type: 'image',
                             size: 1800
                         },
                         {
-                            uri: 'assets/video/Globatron_Vid_1_Final.mp4',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Globatron_Vid_1_Final.mp4',
                             type: 'video',
                             size: 12800
                         },
                         {
-                            uri: 'assets/video/Background_Sky_Final.mp4',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Background_Sky_Final.mp4',
                             type: 'video',
                             size: 3300
                         },
                         {
-                            uri: 'assets/video/intro.mp4',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/video/intro.mp4',
                             type: 'video',
                             size: 4400
                         },
                         {
-                            uri: 'assets/video/Audience_Loop_Final_2.mp4',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Audience_Loop_Final_2.mp4',
                             type: 'video',
                             size: 3700
                         },
                         {
-                            uri: 'assets/video/STOCK_TICKER_LOOP_FINAL.mp4',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/video/STOCK_TICKER_LOOP_FINAL.mp4',
                             type: 'video',
                             size: 4000
                         }

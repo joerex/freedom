@@ -14,8 +14,8 @@ import {DataService} from '../data/data.service';
           </p>
         </div>
         <audio id="map-audio" autoplay loop>
-          <source src="assets/audio/Overhead_Stadium_Audio_Final.ogg" type="audio/ogg" />
-          <source src="assets/audio/Overhead_Stadium_Audio_Final.mp3" type="audio/mpeg" />
+          <source src="http://jdreckley.cachefly.net/freedom/assets/audio/Overhead_Stadium_Audio_Final.ogg" type="audio/ogg" />
+          <source src="http://jdreckley.cachefly.net/freedom/assets/audio/Overhead_Stadium_Audio_Final.mp3" type="audio/mpeg" />
         </audio>
       </div>
     `
@@ -50,7 +50,7 @@ export class Map {
       var marker = new google.maps.Marker({
            position: new google.maps.LatLng(this.data.lastLat, this.data.lastLon),
            map: map,
-           icon: 'assets/images/marker.png'
+           icon: 'http://jdreckley.cachefly.net/freedom/assets/images/marker.png'
          });
     }
   }

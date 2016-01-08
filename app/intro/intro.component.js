@@ -37,7 +37,7 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                         elem.nativeElement.dispatchEvent(event);
                         _app._router.navigate(['Scoreboard']);
                     });
-                    this.src = 'assets/video/intro.mp4';
+                    this.src = 'http://jdreckley.cachefly.net/freedom/assets/video/intro.mp4';
                 }
                 Intro.prototype.routerOnActivate = function (next, prev) {
                     return Rx_1.Observable.of(true).delay(400).toPromise();
