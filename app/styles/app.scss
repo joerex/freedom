@@ -41,6 +41,10 @@ app {
   }
 }
 
+#preload {
+  opacity:0;
+}
+
 audience, map {
   & + #background {
     opacity:0!important;

@@ -27,10 +27,10 @@ System.register(['angular2/core', 'rxjs/Rx'], function(exports_1) {
                     this.audio.play();
                 }
                 Audience.prototype.routerOnActivate = function (next, prev) {
-                    return Rx_1.Observable.of(true).delay(100).toPromise();
+                    return Rx_1.Observable.of(true).delay(400).toPromise();
                 };
                 Audience.prototype.routerOnDeactivate = function (next, prev) {
-                    return Rx_1.Observable.of(true).delay(200).toPromise();
+                    return Rx_1.Observable.of(true).delay(400).toPromise();
                 };
                 Audience = __decorate([
                     core_1.Component({

@@ -25,6 +25,9 @@ app .loaded #background {
 app .loading #background, app .loading #jumbotron, app .loading #audience, app .loading #map-wrapper, app .loading #intro, app .loading #load-screen {
   opacity: 0; }
 
+#preload {
+  opacity: 0; }
+
 audience + #background, map + #background {
   opacity: 0 !important; }
 
