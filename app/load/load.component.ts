@@ -26,6 +26,11 @@ export class Load {
   constructor( public _router : Router, public elem : ElementRef ) {
     this.assets = [
       {
+        uri: 'http://jdreckley.cachefly.net/freedom/assets/images/loading-screen.jpg',
+        type: 'image',
+        size: 33
+      },
+      {
         uri: 'http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png',
         type: 'image',
         size: 456

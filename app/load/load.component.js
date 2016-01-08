@@ -28,6 +28,11 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                     this.elem = elem;
                     this.assets = [
                         {
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/images/loading-screen.jpg',
+                            type: 'image',
+                            size: 33
+                        },
+                        {
                             uri: 'http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png',
                             type: 'image',
                             size: 456
