@@ -48,7 +48,7 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                             size: 1800
                         },
                         {
-                            uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Globatron_Vid_1_Final.mp4',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Globatron_Video_1_Final_2_23RF.mp4',
                             type: 'video',
                             size: 12800
                         },
@@ -63,7 +63,7 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                             size: 4400
                         },
                         {
-                            uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Audience_Loop_Final_2.mp4',
+                            uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Audience_Loop_Final_3.mp4',
                             type: 'video',
                             size: 3700
                         },

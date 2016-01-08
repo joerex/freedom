@@ -19,7 +19,7 @@ import {DataService} from '../data/data.service';
                       <!-- movie -->
                       <div class="video">
                         <video id="jumbo-main" autoplay loop>
-                          <source src="http://jdreckley.cachefly.net/freedom/assets/video/Globatron_Vid_1_Final.mp4" type="video/mp4">
+                          <source src="http://jdreckley.cachefly.net/freedom/assets/video/Globatron_Video_1_Final_2_23RF.mp4" type="video/mp4">
                         </video>
                       </div>
                       <!-- end movie -->

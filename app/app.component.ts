@@ -62,7 +62,7 @@ import {DataService} from './data/data.service';
 
 export class AppComponent {
   showHeader : Boolean;
-  bgSrc : string = 'assets/video/Background_Sky_Final.mp4';
+  bgSrc : string = 'http://jdreckley.cachefly.net/freedom/assets/video/Background_Sky_Final.mp4';
   bgStarted : Boolean;
   bgVid : Object;
   status : string;

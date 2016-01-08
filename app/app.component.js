@@ -46,7 +46,7 @@ System.register(['angular2/core', 'angular2/common', './load/load.component', '.
                     this._router = _router;
                     this.elem = elem;
                     this.data = data;
-                    this.bgSrc = 'assets/video/Background_Sky_Final.mp4';
+                    this.bgSrc = 'http://jdreckley.cachefly.net/freedom/assets/video/Background_Sky_Final.mp4';
                     console.log('Freedom -------------');
                     this.bgStarted = false;
                     this.showHeader = false;
