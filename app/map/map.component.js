@@ -53,10 +53,10 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                     }
                 };
                 Map.prototype.routerOnActivate = function (next, prev) {
-                    return Rx_1.Observable.of(true).delay(100).toPromise();
+                    return Rx_1.Observable.of(true).delay(400).toPromise();
                 };
                 Map.prototype.routerOnDeactivate = function (next, prev) {
-                    return Rx_1.Observable.of(true).delay(200).toPromise();
+                    return Rx_1.Observable.of(true).delay(400).toPromise();
                 };
                 Map = __decorate([
                     core_1.Component({

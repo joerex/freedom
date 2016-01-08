@@ -204,7 +204,7 @@ audience, map {
 
     .wrap {
       max-width: 719px;
-      margin:21px auto 0;
+      margin:34px auto 0;
       padding:0 100px;
 
       &:after {
@@ -216,19 +216,21 @@ audience, map {
   }
 
   .left, .right {
-    width:110px;
+    width:111px;
     color: white;
-    font-size: 40px;
+    font-size: 21px;
     font-weight: bold;
     text-shadow: 0 0 15px rgba(0,0,0,.8);
     text-align: center;
   }
 
   .left {
+    margin-left: 1px;
     float:left;
   }
 
   .right {
+    margin-right:-2px;
     float:right;
   }
 }

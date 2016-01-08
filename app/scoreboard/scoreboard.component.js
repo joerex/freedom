@@ -33,7 +33,7 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                     setTimeout(function () { console.log('Data', data.lastTarget); }, 2000);
                 }
                 Scoreboard.prototype.routerOnActivate = function (next, prev) {
-                    return Rx_1.Observable.of(true).delay(100).toPromise();
+                    return Rx_1.Observable.of(true).delay(400).toPromise();
                 };
                 Scoreboard.prototype.routerOnDeactivate = function (next, prev) {
                     return Rx_1.Observable.of(true).delay(400).toPromise();

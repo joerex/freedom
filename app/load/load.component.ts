@@ -20,15 +20,11 @@ export class Load {
   totalSize : number;
   numLoaded : number;
   assets : Object[];
+  videos : Object[];
 
 
   constructor( public _router : Router, public elem : ElementRef ) {
     this.assets = [
-      {
-        uri: 'assets/images/loading-screen.jpg',
-        type: 'image',
-        size: 60
-      },
       {
         uri: 'assets/images/globatron/GLOBATRON_SCOREBOARD.png',
         type: 'image',
@@ -75,6 +71,7 @@ export class Load {
     this.numLoaded= 0;
     this.totalSize = 0;
     this.percLoaded = 0;
+    this.videos = [];
     // save context
     var _this = this;
     // get total size of assets
@@ -94,42 +91,50 @@ export class Load {
     var _this = this;
     // load assets
     this.assets.forEach(function(asset) {
-      // console.log('Preloading: ', asset.uri, asset.perc);
+      //console.log('Preloading: ', asset.uri, asset.perc);
       /* images  ----------------------------------------------------------- */
       if (asset.type === 'image') {
         var img = new Image();
         img.onload = function() {
+          //console.log('Image loaded. Total loaded: ' + _this.percLoaded, asset.uri);
           _this.numLoaded++;
           _this.percLoaded += asset.perc;
           if (_this.numLoaded === _this.assets.length) {
             setTimeout(function() { _this.finish() }, 1000);
           }
-          //console.log(thisapp.percLoaded);
         };
+        img.onerror = function() {
+          console.log('Image load failed.', asset.uri);
+        }
         img.src = asset.uri;
       }
       /* video  ----------------------------------------------------------- */
       else if (asset.type === 'video') {
         var video = document.createElement( 'video' );
         // play inline if on an iphone (only works for native/hybrid apps)
-        var attr = document.createAttribute('webkit-playsinline');
-        attr.value = 'true';
-        video.setAttributeNode(attr);
+        //var attr = document.createAttribute('webkit-playsinline');
+        //attr.value = 'true';
+        //video.setAttributeNode(attr);
         video.addEventListener('loadeddata', function() {
+          //console.log('Video loaded. Total loaded: ' + _this.percLoaded, asset.uri);
           _this.numLoaded++;
           _this.percLoaded += asset.perc;
           if (_this.numLoaded === _this.assets.length) {
             setTimeout(function() { _this.finish() }, 1000);
           }
-          //console.log(thisapp.percLoaded);
+        }, false);
+        video.addEventListener('onerror', function() {
+          console.log('Video load failed.', asset.uri);
         }, false);
       	video.src = asset.uri;
       	video.load();
+        _this.videos.push(video);
       }
     });
   }
 
   finish() {
+    console.log('Finishing');
     var event = document.createEvent('Event');
     event.initEvent('setForIntro', true, true);
     this.elem.nativeElement.dispatchEvent(event);

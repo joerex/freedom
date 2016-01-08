@@ -40,7 +40,7 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                     this.src = 'assets/video/intro.mp4';
                 }
                 Intro.prototype.routerOnActivate = function (next, prev) {
-                    return Rx_1.Observable.of(true).delay(100).toPromise();
+                    return Rx_1.Observable.of(true).delay(400).toPromise();
                 };
                 Intro.prototype.routerOnDeactivate = function (next, prev) {
                     //return Observable.of(true).delay(400).toPromise();

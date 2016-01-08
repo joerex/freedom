@@ -141,22 +141,24 @@ audience + #background, map + #background {
     top: 50%; }
     #load-screen .container .wrap {
       max-width: 719px;
-      margin: 21px auto 0;
+      margin: 34px auto 0;
       padding: 0 100px; }
       #load-screen .container .wrap:after {
         display: table;
         content: '';
         clear: both; }
   #load-screen .left, #load-screen .right {
-    width: 110px;
+    width: 111px;
     color: white;
-    font-size: 40px;
+    font-size: 21px;
     font-weight: bold;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
     text-align: center; }
   #load-screen .left {
+    margin-left: 1px;
     float: left; }
   #load-screen .right {
+    margin-right: -2px;
     float: right; }
 
 #jumbotron {

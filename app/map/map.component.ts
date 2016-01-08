@@ -56,11 +56,11 @@ export class Map {
   }
 
   routerOnActivate(next: ComponentInstruction, prev: ComponentInstruction) {
-    return Observable.of(true).delay(100).toPromise();
+    return Observable.of(true).delay(400).toPromise();
   }
 
   routerOnDeactivate(next: ComponentInstruction, prev: ComponentInstruction) {
-    return Observable.of(true).delay(200).toPromise();
+    return Observable.of(true).delay(400).toPromise();
   }
 
 }
