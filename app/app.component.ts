@@ -38,7 +38,7 @@ import {DataService} from './data/data.service';
               </li>
               <li>
                 <a class="map"
-                   [ngClass]="{active: active === 'map'}"
+                   [ngClass]="{active: active === 'stadium'}"
                    (click)="navigate('Map')">
                 </a>
               </li>
@@ -62,7 +62,7 @@ import {DataService} from './data/data.service';
 
 export class AppComponent {
   showHeader : Boolean;
-  bgSrc : string = 'http://jdreckley.cachefly.net/freedom/assets/video/Background_Sky_Final.mp4';
+  bgSrc : string = 'assets/video/Background_Sky_Final.mp4';
   bgStarted : Boolean;
   bgVid : Object;
   status : string;
@@ -94,7 +94,7 @@ export class AppComponent {
     //
     elem.nativeElement.addEventListener('setForScoreboard', function (e) {
       _app.status = 'loading';
-      _app.background();
+      setTimeout(function() {_app.background()}, 400);
     }, false);
 
   }

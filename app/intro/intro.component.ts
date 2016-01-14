@@ -28,14 +28,6 @@ export class Intro {
       elem.nativeElement.dispatchEvent(event);
       _app._router.navigate( ['Scoreboard'] );
     });
-    this.src = 'http://jdreckley.cachefly.net/freedom/assets/video/intro.mp4';
-  }
-
-  routerOnActivate(next: ComponentInstruction, prev: ComponentInstruction) {
-    return Observable.of(true).delay(400).toPromise();
-  }
-
-  routerOnDeactivate(next: ComponentInstruction, prev: ComponentInstruction) {
-    //return Observable.of(true).delay(400).toPromise();
+    this.src = 'assets/video/intro.mp4';
   }
 }

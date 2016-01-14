@@ -125,7 +125,7 @@ audience, map {
 #header {
   display:none;
   position:absolute;
-  bottom:18px;
+  top:18px;
   left:18px;
   z-index:10;
 
@@ -162,32 +162,44 @@ audience, map {
           background-size: 40px auto;
           background-position: center center;
           border-radius: 20px;
-          box-shadow: 0 0 40px rgba(0,0,0,1);
+          box-shadow: 0 0 40px rgba(255,255,255,.4);
 
           &.home {
-            background-image:url(http://jdreckley.cachefly.net/freedom/assets/images/home-trans.png);
-            background-color: rgba(0,0,0,.8);
+            background-image:url(../../assets/images/home-trans.png);
+            background-color: rgba(0,0,0,.4);
 
-            &:hover , &.active {
-              background-color:#900808;
+            &.active {
+              background-color:#960707;
+            }
+
+            &:hover {
+              background-color:#540404;
             }
           }
 
           &.audience {
-            background-image:url(http://jdreckley.cachefly.net/freedom/assets/images/audience-trans.png);
-            background-color: rgba(0,0,0,.8);
+            background-image:url(../../assets/images/audience-trans.png);
+            background-color: rgba(0,0,0,.4);
 
-            &:hover, &.active {
-              background-color:#900808;
+            &.active {
+              background-color:#960707;
+            }
+
+            &:hover {
+              background-color:#540404;
             }
           }
 
           &.map {
-            background-image:url(http://jdreckley.cachefly.net/freedom/assets/images/map-trans.png);
-            background-color: rgba(0,0,0,.8);
+            background-image:url(../../assets/images/map-trans.png);
+            background-color: rgba(0,0,0,.4);
 
-            &:hover, &.active {
-              background-color:#900808;
+            &.active {
+              background-color:#960707;
+            }
+
+            &:hover {
+              background-color:#540404;
             }
           }
         }
@@ -200,7 +212,7 @@ audience, map {
   overflow:auto;
   width:100%;
   height:100%;
-  background:url(http://jdreckley.cachefly.net/freedom/assets/images/loading-screen.jpg) no-repeat center center;
+  background:url(../../assets/images/loading-screen.jpg) no-repeat center center;
 
   .container {
     position:relative;
@@ -245,9 +257,9 @@ audience, map {
   overflow:auto;
   box-sizing: border-box;
   background-image:
-    url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png),
-    url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL_Top.png),
-    url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL.jpg);
+    url(../../assets/images/globatron/GLOBATRON_SCOREBOARD.png),
+    url(../../assets/images/globatron/GLOBATRON_WALL_Top.png),
+    url(../../assets/images/globatron/GLOBATRON_WALL.jpg);
   background-repeat:
     no-repeat,
     repeat-x,
@@ -285,6 +297,7 @@ audience, map {
       padding: 52px 0 0;
 
       .stat {
+        height:22px;
         margin:38px 0 0;
         color:#f3ac3b;
         letter-spacing: 2px;
@@ -337,22 +350,6 @@ audience, map {
       -webkit-box-shadow: 0 0 30px 15px rgba(0,0,0,.2);
       box-shadow: 0 0 30px 15px rgba(0,0,0,.2);
 
-      span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        padding: 5px 0;
-        color: white;
-        letter-spacing: 2px;
-        font-size: 2.5em;
-        opacity: 1;
-        z-index: 1;
-        text-transform: uppercase;
-      }
-
       video {
         position:absolute;
         top:0;
@@ -364,10 +361,35 @@ audience, map {
   }
 }
 
+#scroller {
+  overflow:hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 100%;
+  display: inline-block;
+  opacity: 1;
+  margin:0 5px;
+  z-index: 1;
+
+  span {
+    position:absolute;
+    top:0;
+    left:50px;
+    padding-top:6px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+
 #map-wrapper {
   height:100%;
   overflow:auto;
-  background:url(http://jdreckley.cachefly.net/freedom/assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
+  background:url(../../assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
   background-size:1540px;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
@@ -401,12 +423,10 @@ audience, map {
     color: #efefef;
     font-family: 'times_squareregular';
 
-    p {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 56px;
-      text-align: center;
-      text-transform: uppercase;
+    #scroller {
+      span {
+        font-size:3.5em;
+      }
     }
   }
 }
@@ -432,7 +452,8 @@ audience, map {
         padding: 75px 0 0;
 
         .stat {
-          margin: 58px 0 0;
+          height:21px;
+          margin: 55px 0 0;
           font-size:1.4em;
         }
       }
@@ -445,7 +466,7 @@ audience, map {
 
     .ticker-wrap {
       width: 645px;
-      margin: 56px auto 0;
+      margin: 63px auto 0;
 
       .ticker-container {
         width: 585px;

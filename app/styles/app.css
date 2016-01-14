@@ -90,7 +90,7 @@ audience + #background, map + #background {
 #header {
   display: none;
   position: absolute;
-  bottom: 18px;
+  top: 18px;
   left: 18px;
   z-index: 10; }
   #header.active {
@@ -117,28 +117,34 @@ audience + #background, map + #background {
         background-size: 40px auto;
         background-position: center center;
         border-radius: 20px;
-        box-shadow: 0 0 40px black; }
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.4); }
         #header .navbar ul li a.home {
-          background-image: url(http://jdreckley.cachefly.net/freedom/assets/images/home-trans.png);
-          background-color: rgba(0, 0, 0, 0.8); }
-          #header .navbar ul li a.home:hover, #header .navbar ul li a.home.active {
-            background-color: #900808; }
+          background-image: url(../../assets/images/home-trans.png);
+          background-color: rgba(0, 0, 0, 0.4); }
+          #header .navbar ul li a.home.active {
+            background-color: #960707; }
+          #header .navbar ul li a.home:hover {
+            background-color: #540404; }
         #header .navbar ul li a.audience {
-          background-image: url(http://jdreckley.cachefly.net/freedom/assets/images/audience-trans.png);
-          background-color: rgba(0, 0, 0, 0.8); }
-          #header .navbar ul li a.audience:hover, #header .navbar ul li a.audience.active {
-            background-color: #900808; }
+          background-image: url(../../assets/images/audience-trans.png);
+          background-color: rgba(0, 0, 0, 0.4); }
+          #header .navbar ul li a.audience.active {
+            background-color: #960707; }
+          #header .navbar ul li a.audience:hover {
+            background-color: #540404; }
         #header .navbar ul li a.map {
-          background-image: url(http://jdreckley.cachefly.net/freedom/assets/images/map-trans.png);
-          background-color: rgba(0, 0, 0, 0.8); }
-          #header .navbar ul li a.map:hover, #header .navbar ul li a.map.active {
-            background-color: #900808; }
+          background-image: url(../../assets/images/map-trans.png);
+          background-color: rgba(0, 0, 0, 0.4); }
+          #header .navbar ul li a.map.active {
+            background-color: #960707; }
+          #header .navbar ul li a.map:hover {
+            background-color: #540404; }
 
 #load-screen {
   overflow: auto;
   width: 100%;
   height: 100%;
-  background: url(http://jdreckley.cachefly.net/freedom/assets/images/loading-screen.jpg) no-repeat center center; }
+  background: url(../../assets/images/loading-screen.jpg) no-repeat center center; }
   #load-screen .container {
     position: relative;
     top: 50%; }
@@ -169,7 +175,7 @@ audience + #background, map + #background {
   padding: 0;
   overflow: auto;
   box-sizing: border-box;
-  background-image: url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png), url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL_Top.png), url(http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL.jpg);
+  background-image: url(../../assets/images/globatron/GLOBATRON_SCOREBOARD.png), url(../../assets/images/globatron/GLOBATRON_WALL_Top.png), url(../../assets/images/globatron/GLOBATRON_WALL.jpg);
   background-repeat: no-repeat, repeat-x, repeat-x;
   background-size: 871px, 1590px auto, 1590px auto;
   background-position: center 112px, center 521px, center 526px;
@@ -193,6 +199,7 @@ audience + #background, map + #background {
       float: left;
       padding: 52px 0 0; }
       #jumbotron .screen-wrap .stats-wrap .stat {
+        height: 22px;
         margin: 38px 0 0;
         color: #f3ac3b;
         letter-spacing: 2px;
@@ -227,20 +234,6 @@ audience + #background, map + #background {
       background: #333;
       -webkit-box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.2);
       box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.2); }
-      #jumbotron .ticker-wrap .ticker-container span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        padding: 5px 0;
-        color: white;
-        letter-spacing: 2px;
-        font-size: 2.5em;
-        opacity: 1;
-        z-index: 1;
-        text-transform: uppercase; }
       #jumbotron .ticker-wrap .ticker-container video {
         position: absolute;
         top: 0;
@@ -248,10 +241,32 @@ audience + #background, map + #background {
         width: 100%;
         height: 100%; }
 
+#scroller {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 98%;
+  height: 100%;
+  display: inline-block;
+  opacity: 1;
+  margin: 0 5px;
+  z-index: 1; }
+  #scroller span {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    padding-top: 6px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    white-space: nowrap; }
+
 #map-wrapper {
   height: 100%;
   overflow: auto;
-  background: url(http://jdreckley.cachefly.net/freedom/assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
+  background: url(../../assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
   background-size: 1540px;
   -webkit-transition: all 400ms ease;
   -moz-transition: all 400ms ease;
@@ -279,12 +294,8 @@ audience + #background, map + #background {
     border: 1px solid #efefef;
     color: #efefef;
     font-family: 'times_squareregular'; }
-    #map-wrapper #info p {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 56px;
-      text-align: center;
-      text-transform: uppercase; }
+    #map-wrapper #info #scroller span {
+      font-size: 3.5em; }
 
 @media all and (min-width: 1440px) {
   #jumbotron {
@@ -297,14 +308,15 @@ audience + #background, map + #background {
         width: 222px;
         padding: 75px 0 0; }
         #jumbotron .screen-wrap .stats-wrap .stat {
-          margin: 58px 0 0;
+          height: 21px;
+          margin: 55px 0 0;
           font-size: 1.4em; }
       #jumbotron .screen-wrap .video {
         width: 452px;
         margin: 0 0 0 40px; }
     #jumbotron .ticker-wrap {
       width: 645px;
-      margin: 56px auto 0; }
+      margin: 63px auto 0; }
       #jumbotron .ticker-wrap .ticker-container {
         width: 585px;
         height: 66px;

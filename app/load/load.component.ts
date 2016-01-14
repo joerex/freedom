@@ -26,47 +26,47 @@ export class Load {
   constructor( public _router : Router, public elem : ElementRef ) {
     this.assets = [
       {
-        uri: 'http://jdreckley.cachefly.net/freedom/assets/images/loading-screen.jpg',
+        uri: 'assets/images/loading-screen.jpg',
         type: 'image',
         size: 33
       },
       {
-        uri: 'http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png',
+        uri: 'assets/images/globatron/GLOBATRON_SCOREBOARD.png',
         type: 'image',
         size: 456
       },
       {
-        uri: 'http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL_Top.png',
+        uri: 'assets/images/globatron/GLOBATRON_WALL_Top.png',
         type: 'image',
         size: 1800
       },
       {
-        uri: 'http://jdreckley.cachefly.net/freedom/assets/images/globatron/GLOBATRON_WALL.jpg',
+        uri: 'assets/images/globatron/GLOBATRON_WALL.jpg',
         type: 'image',
         size: 1800
       },
       {
-        uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Globatron_Video_1_Final_2_23RF.mp4',
+        uri: 'https://s3.amazonaws.com/project-freedom/Globatron_Video_1_Final_2_23RF.mp4',
         type: 'video',
         size: 12800
       },
       {
-        uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Background_Sky_Final.mp4',
+        uri: 'assets/video/Background_Sky_Final.mp4',
         type: 'video',
         size: 3300
       },
       {
-        uri: 'http://jdreckley.cachefly.net/freedom/assets/video/intro.mp4',
+        uri: 'assets/video/intro.mp4',
         type: 'video',
         size: 4400
       },
       {
-        uri: 'http://jdreckley.cachefly.net/freedom/assets/video/Audience_Loop_Final_3.mp4',
+        uri: 'assets/video/Audience_Loop_Final_3.mp4',
         type: 'video',
         size: 3700
       },
       {
-        uri: 'http://jdreckley.cachefly.net/freedom/assets/video/STOCK_TICKER_LOOP_FINAL.mp4',
+        uri: 'assets/video/STOCK_TICKER_LOOP_FINAL.mp4',
         type: 'video',
         size: 4000
       }

@@ -29,7 +29,20 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                     this.load();
                     this.audio = document.getElementById('map-audio');
                     this.audio.play();
+                    this.scrollText = document.getElementById('map-text');
+                    this.scrollPosition = 50;
+                    var _this = this;
+                    this.scrollTimeout = setInterval(function () { _this.scroll(); }, 100);
                 }
+                Map.prototype.scroll = function () {
+                    if (this.scrollPosition < -this.scrollText.clientWidth) {
+                        this.scrollPosition = 50;
+                    }
+                    else {
+                        this.scrollPosition -= 3;
+                    }
+                    this.scrollText.style.left = this.scrollPosition;
+                };
                 Map.prototype.load = function () {
                     if (!this.dataservice.loaded) {
                         var _app = this;
@@ -56,12 +69,13 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                     return Rx_1.Observable.of(true).delay(400).toPromise();
                 };
                 Map.prototype.routerOnDeactivate = function (next, prev) {
+                    clearInterval(this.scrollTimeout);
                     return Rx_1.Observable.of(true).delay(400).toPromise();
                 };
                 Map = __decorate([
                     core_1.Component({
                         selector: 'map',
-                        template: "\n      <div id=\"map-wrapper\">\n        <div id=\"map\"></div>\n        <div id=\"info\">\n          <p>\n            {{data.mapTicker}}\n          </p>\n        </div>\n        <audio id=\"map-audio\" autoplay loop>\n          <source src=\"http://jdreckley.cachefly.net/freedom/assets/audio/Overhead_Stadium_Audio_Final.ogg\" type=\"audio/ogg\" />\n          <source src=\"http://jdreckley.cachefly.net/freedom/assets/audio/Overhead_Stadium_Audio_Final.mp3\" type=\"audio/mpeg\" />\n        </audio>\n      </div>\n    "
+                        template: "\n      <div id=\"map-wrapper\">\n        <div id=\"map\"></div>\n        <div id=\"info\">\n          <div id=\"scroller\">\n            <span id=\"map-text\">{{data.mapTicker}}</span>\n          </div>\n        </div>\n        <audio id=\"map-audio\" autoplay loop>\n          <source src=\"assets/audio/Overhead_Stadium_Audio_Final.ogg\" type=\"audio/ogg\" />\n          <source src=\"assets/audio/Overhead_Stadium_Audio_Final.mp3\" type=\"audio/mpeg\" />\n        </audio>\n      </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [data_service_1.DataService])
                 ], Map);

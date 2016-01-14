@@ -30,19 +30,33 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                     this.jumbotron.play();
                     this.ticker = document.getElementById('ticker');
                     this.ticker.play();
+                    this.scrollText = document.getElementById('ticker-text');
+                    this.scrollPosition = 50;
+                    var _this = this;
+                    this.scrollTimeout = setInterval(function () { _this.scroll(); }, 100);
                     setTimeout(function () { console.log('Data', data.lastTarget); }, 2000);
                 }
+                Scoreboard.prototype.scroll = function () {
+                    if (this.scrollPosition < -this.scrollText.clientWidth) {
+                        this.scrollPosition = 50;
+                    }
+                    else {
+                        this.scrollPosition -= 3;
+                    }
+                    this.scrollText.style.left = this.scrollPosition;
+                };
                 Scoreboard.prototype.routerOnActivate = function (next, prev) {
-                    return Rx_1.Observable.of(true).delay(400).toPromise();
+                    return Rx_1.Observable.of(true).delay(1000).toPromise();
                 };
                 Scoreboard.prototype.routerOnDeactivate = function (next, prev) {
+                    clearInterval(this.scrollTimeout);
                     return Rx_1.Observable.of(true).delay(400).toPromise();
                 };
                 Scoreboard = __decorate([
                     core_1.Component({
                         encapsulation: core_1.ViewEncapsulation.None,
                         selector: 'scoreboard',
-                        template: " <div id=\"jumbotron\" class=\"desktop\">\n                  <div class=\"screen-wrap\">\n                      <div class=\"stats-wrap\">\n                        <div class=\"stats-container\">\n                          <div class=\"stat\"><span class=\"target\">{{data.lastTarget}}</span></div>\n                          <div class=\"stat\"><span class=\"date\">{{data.lastDate}}</span></div>\n                          <div class=\"stat\"><span class=\"kills\">{{data.lastKills}}</span></div>\n                          <div class=\"stat\"><span class=\"total-kills\">{{data.totalKills}}</span></div>\n                        </div>\n                      </div>\n                      <!-- movie -->\n                      <div class=\"video\">\n                        <video id=\"jumbo-main\" autoplay loop>\n                          <source src=\"http://jdreckley.cachefly.net/freedom/assets/video/Globatron_Video_1_Final_2_23RF.mp4\" type=\"video/mp4\">\n                        </video>\n                      </div>\n                      <!-- end movie -->\n                      <!-- right side -->\n                      <div class=\"\"></div>\n                      <!-- end right side -->\n                  </div>\n                  <div class=\"ticker-wrap\">\n                    <div class=\"ticker-container\">\n                      <span>{{data.homeTicker}}</span>\n                      <video id=\"ticker\" class=\"bg-vid\" autoplay loop>\n                        <source src=\"http://jdreckley.cachefly.net/freedom/assets/video/STOCK_TICKER_LOOP_FINAL.mp4\" type=\"video/mp4\">\n                      </video>\n                    </div>\n                  </div>\n              </div>\n              "
+                        template: " <div id=\"jumbotron\" class=\"desktop\">\n                  <div class=\"screen-wrap\">\n                      <div class=\"stats-wrap\">\n                        <div class=\"stats-container\">\n                          <div class=\"stat\"><span class=\"target\">{{data.lastTarget}}</span></div>\n                          <div class=\"stat\"><span class=\"date\">{{data.lastDate}}</span></div>\n                          <div class=\"stat\"><span class=\"kills\">{{data.lastKills}}</span></div>\n                          <div class=\"stat\"><span class=\"total-kills\">{{data.totalKills}}</span></div>\n                        </div>\n                      </div>\n                      <!-- movie -->\n                      <div class=\"video\">\n                        <video id=\"jumbo-main\" autoplay loop>\n                          <source src=\"https://s3.amazonaws.com/project-freedom/Globatron_Video_1_Final_2_23RF.mp4\" type=\"video/mp4\">\n                        </video>\n                      </div>\n                      <!-- end movie -->\n                      <!-- right side -->\n                      <div class=\"\"></div>\n                      <!-- end right side -->\n                  </div>\n                  <div class=\"ticker-wrap\">\n                    <div class=\"ticker-container\">\n                      <div id=\"scroller\">\n                        <span id=\"ticker-text\">{{data.homeTicker}}</span>\n                      </div>\n                      <video id=\"ticker\" class=\"bg-vid\" autoplay loop>\n                        <source src=\"assets/video/STOCK_TICKER_LOOP_FINAL.mp4\" type=\"video/mp4\">\n                      </video>\n                    </div>\n                  </div>\n              </div>\n              "
                     }), 
                     __metadata('design:paramtypes', [data_service_1.DataService])
                 ], Scoreboard);

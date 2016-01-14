@@ -9,13 +9,13 @@ import {DataService} from '../data/data.service';
       <div id="map-wrapper">
         <div id="map"></div>
         <div id="info">
-          <p>
-            {{data.mapTicker}}
-          </p>
+          <div id="scroller">
+            <span id="map-text">{{data.mapTicker}}</span>
+          </div>
         </div>
         <audio id="map-audio" autoplay loop>
-          <source src="http://jdreckley.cachefly.net/freedom/assets/audio/Overhead_Stadium_Audio_Final.ogg" type="audio/ogg" />
-          <source src="http://jdreckley.cachefly.net/freedom/assets/audio/Overhead_Stadium_Audio_Final.mp3" type="audio/mpeg" />
+          <source src="assets/audio/Overhead_Stadium_Audio_Final.ogg" type="audio/ogg" />
+          <source src="assets/audio/Overhead_Stadium_Audio_Final.mp3" type="audio/mpeg" />
         </audio>
       </div>
     `
@@ -24,12 +24,29 @@ import {DataService} from '../data/data.service';
 export class Map {
   dataservice : DataService;
   audio : Object;
+  scrollText : Object;
+  scrollPosition : number;
+  scrollTimeout;
 
   constructor( public data : DataService ) {
     this.dataservice = data;
     this.load();
     this.audio = document.getElementById('map-audio');
     this.audio.play();
+    this.scrollText = document.getElementById('map-text');
+    this.scrollPosition = 50;
+    var _this = this;
+    this.scrollTimeout = setInterval(function() { _this.scroll() }, 100);
+  }
+
+  scroll() {
+    if (this.scrollPosition < -this.scrollText.clientWidth) {
+      this.scrollPosition = 50;
+    }
+    else {
+      this.scrollPosition -= 3;
+    }
+    this.scrollText.style.left = this.scrollPosition;
   }
 
   load() {
@@ -60,6 +77,7 @@ export class Map {
   }
 
   routerOnDeactivate(next: ComponentInstruction, prev: ComponentInstruction) {
+    clearInterval(this.scrollTimeout);
     return Observable.of(true).delay(400).toPromise();
   }
 

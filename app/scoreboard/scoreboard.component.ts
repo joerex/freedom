@@ -19,7 +19,7 @@ import {DataService} from '../data/data.service';
                       <!-- movie -->
                       <div class="video">
                         <video id="jumbo-main" autoplay loop>
-                          <source src="http://jdreckley.cachefly.net/freedom/assets/video/Globatron_Video_1_Final_2_23RF.mp4" type="video/mp4">
+                          <source src="https://s3.amazonaws.com/project-freedom/Globatron_Video_1_Final_2_23RF.mp4" type="video/mp4">
                         </video>
                       </div>
                       <!-- end movie -->
@@ -29,9 +29,11 @@ import {DataService} from '../data/data.service';
                   </div>
                   <div class="ticker-wrap">
                     <div class="ticker-container">
-                      <span>{{data.homeTicker}}</span>
+                      <div id="scroller">
+                        <span id="ticker-text">{{data.homeTicker}}</span>
+                      </div>
                       <video id="ticker" class="bg-vid" autoplay loop>
-                        <source src="http://jdreckley.cachefly.net/freedom/assets/video/STOCK_TICKER_LOOP_FINAL.mp4" type="video/mp4">
+                        <source src="assets/video/STOCK_TICKER_LOOP_FINAL.mp4" type="video/mp4">
                       </video>
                     </div>
                   </div>
@@ -42,6 +44,9 @@ import {DataService} from '../data/data.service';
 export class Scoreboard {
   jumbotron : Object;
   ticker : Object;
+  scrollText : Object;
+  scrollPosition : number;
+  scrollTimeout;
   active : Boolean;
   info : Object;
 
@@ -51,15 +56,29 @@ export class Scoreboard {
     this.jumbotron.play();
     this.ticker = document.getElementById('ticker');
     this.ticker.play();
-
+    this.scrollText = document.getElementById('ticker-text');
+    this.scrollPosition = 50;
+    var _this = this;
+    this.scrollTimeout = setInterval(function() { _this.scroll() }, 100);
     setTimeout(function() {console.log('Data', data.lastTarget)}, 2000);
   }
 
+  scroll() {
+    if (this.scrollPosition < -this.scrollText.clientWidth) {
+      this.scrollPosition = 50;
+    }
+    else {
+      this.scrollPosition -= 3;
+    }
+    this.scrollText.style.left = this.scrollPosition;
+  }
+
   routerOnActivate(next: ComponentInstruction, prev: ComponentInstruction) {
-    return Observable.of(true).delay(400).toPromise();
+    return Observable.of(true).delay(1000).toPromise();
   }
 
   routerOnDeactivate(next: ComponentInstruction, prev: ComponentInstruction) {
+    clearInterval(this.scrollTimeout);
     return Observable.of(true).delay(400).toPromise();
   }
 
