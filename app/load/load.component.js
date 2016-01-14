@@ -33,6 +33,31 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                             size: 33
                         },
                         {
+                            uri: 'assets/video/intro.mp4',
+                            type: 'video',
+                            size: 4400
+                        },
+                        {
+                            uri: 'assets/video/Background_Sky_Final.mp4',
+                            type: 'video',
+                            size: 3300
+                        },
+                        {
+                            uri: 'https://s3.amazonaws.com/project-freedom/Globatron_Video_1_Final_2_23RF.mp4',
+                            type: 'video',
+                            size: 12800
+                        },
+                        {
+                            uri: 'assets/video/Audience_Loop_Final_3.mp4',
+                            type: 'video',
+                            size: 3700
+                        },
+                        {
+                            uri: 'assets/video/STOCK_TICKER_LOOP_FINAL.mp4',
+                            type: 'video',
+                            size: 4000
+                        },
+                        {
                             uri: 'assets/images/globatron/GLOBATRON_SCOREBOARD.png',
                             type: 'image',
                             size: 456
@@ -46,31 +71,6 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                             uri: 'assets/images/globatron/GLOBATRON_WALL.jpg',
                             type: 'image',
                             size: 1800
-                        },
-                        {
-                            uri: 'https://s3.amazonaws.com/project-freedom/Globatron_Video_1_Final_2_23RF.mp4',
-                            type: 'video',
-                            size: 12800
-                        },
-                        {
-                            uri: 'assets/video/Background_Sky_Final.mp4',
-                            type: 'video',
-                            size: 3300
-                        },
-                        {
-                            uri: 'assets/video/intro.mp4',
-                            type: 'video',
-                            size: 4400
-                        },
-                        {
-                            uri: 'assets/video/Audience_Loop_Final_3.mp4',
-                            type: 'video',
-                            size: 3700
-                        },
-                        {
-                            uri: 'assets/video/STOCK_TICKER_LOOP_FINAL.mp4',
-                            type: 'video',
-                            size: 4000
                         }
                     ];
                     // initiate values
