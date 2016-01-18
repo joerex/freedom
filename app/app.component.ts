@@ -44,6 +44,9 @@ import {DataService} from './data/data.service';
               </li>
             </ul>
           </div>
+          <a class="mute"
+             [ngClass]="{muted : muted}"
+             (click)="mute('toggle')"></a>
         </div>
 
       </div><!-- app-wrap -->
@@ -67,6 +70,7 @@ export class AppComponent {
   bgVid : Object;
   status : string;
   active : string;
+  muted : Boolean;
 
   constructor( public _router: Router, public elem : ElementRef,  public data : DataService ) {
 
@@ -74,6 +78,7 @@ export class AppComponent {
 
     this.bgStarted = false;
     this.showHeader = false;
+    this.muted = false;
     this.status = 'loading';
     data.load();
 
@@ -83,6 +88,12 @@ export class AppComponent {
       if (route != '' && route != 'intro') {
         this.showHeader = true;
         this.background();
+        if (this.muted) {
+          this.mute('on');
+        }
+        else {
+          this.mute('off');
+        }
       }
     });
 
@@ -110,6 +121,32 @@ export class AppComponent {
       this.bgVid.src = this.bgSrc;
       this.bgVid.load();
       this.bgStarted = true;
+    }
+  }
+
+  mute(command : String) {
+    var audio = document.getElementsByTagName('audio');
+    var video = document.getElementsByTagName('video');
+    if (command === 'toggle') {
+      this.muted = this.muted === true ? false : true;
+    }
+    if (command === 'on') {
+      this.muted = true;
+    }
+    if (command === 'off') {
+      this.muted = false;
+    }
+    if (video.length > 0) {
+      for(let i = 0; i < video.length; i++) {
+        console.log('muting');
+        video[i].muted = Boolean(this.muted);
+      }
+    }
+    if (audio.length > 0) {
+      for(let i = 0; i < audio.length; i++) {
+        console.log('muting');
+        audio[i].muted = Boolean(this.muted);
+      }
     }
   }
 }

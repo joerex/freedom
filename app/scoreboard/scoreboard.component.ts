@@ -19,7 +19,7 @@ import {DataService} from '../data/data.service';
                       <!-- movie -->
                       <div class="video">
                         <video id="jumbo-main" autoplay loop>
-                          <source src="https://s3.amazonaws.com/project-freedom/Globatron_Video_1_Final_2_23RF.mp4" type="video/mp4">
+                          <source src="assets/video/Globatron_Video_1_Final_Small.mp4" type="video/mp4">
                         </video>
                       </div>
                       <!-- end movie -->
@@ -33,7 +33,7 @@ import {DataService} from '../data/data.service';
                         <span id="ticker-text">{{data.homeTicker}}</span>
                       </div>
                       <video id="ticker" class="bg-vid" autoplay loop>
-                        <source src="assets/video/STOCK_TICKER_LOOP_FINAL.mp4" type="video/mp4">
+                        <source src="assets/video/STOCK_TICKER_LOOP_FINAL_SMALL.mp4" type="video/mp4">
                       </video>
                     </div>
                   </div>
@@ -53,8 +53,9 @@ export class Scoreboard {
   constructor( public data : DataService ) {
     console.log('Constructing Scoreboard', data);
     this.jumbotron = document.getElementById('jumbo-main');
-    this.jumbotron.play();
     this.ticker = document.getElementById('ticker');
+    this.jumbotron.muted = true;
+    this.jumbotron.play();
     this.ticker.play();
     this.scrollText = document.getElementById('ticker-text');
     this.scrollPosition = 50;
@@ -65,7 +66,7 @@ export class Scoreboard {
 
   scroll() {
     if (this.scrollPosition < -this.scrollText.clientWidth) {
-      this.scrollPosition = 50;
+      this.scrollPosition = this.ticker.clientWidth;
     }
     else {
       this.scrollPosition -= 3;

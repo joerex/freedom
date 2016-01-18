@@ -43,7 +43,7 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                             size: 3300
                         },
                         {
-                            uri: 'https://s3.amazonaws.com/project-freedom/Globatron_Video_1_Final_2_23RF.mp4',
+                            uri: 'assets/video/Globatron_Video_1_Final_Small.mp4',
                             type: 'video',
                             size: 12800
                         },
@@ -53,7 +53,7 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                             size: 3700
                         },
                         {
-                            uri: 'assets/video/STOCK_TICKER_LOOP_FINAL.mp4',
+                            uri: 'assets/video/STOCK_TICKER_LOOP_FINAL_SMALL.mp4',
                             type: 'video',
                             size: 4000
                         },

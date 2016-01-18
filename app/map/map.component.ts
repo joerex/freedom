@@ -25,6 +25,7 @@ export class Map {
   dataservice : DataService;
   audio : Object;
   scrollText : Object;
+  scroller : Object;
   scrollPosition : number;
   scrollTimeout;
 
@@ -33,6 +34,7 @@ export class Map {
     this.load();
     this.audio = document.getElementById('map-audio');
     this.audio.play();
+    this.scroller = document.getElementById('scroller');
     this.scrollText = document.getElementById('map-text');
     this.scrollPosition = 50;
     var _this = this;
@@ -41,7 +43,7 @@ export class Map {
 
   scroll() {
     if (this.scrollPosition < -this.scrollText.clientWidth) {
-      this.scrollPosition = 50;
+      this.scrollPosition = this.scroller.clientWidth;
     }
     else {
       this.scrollPosition -= 3;
@@ -67,7 +69,7 @@ export class Map {
       var marker = new google.maps.Marker({
            position: new google.maps.LatLng(this.data.lastLat, this.data.lastLon),
            map: map,
-           icon: 'http://jdreckley.cachefly.net/freedom/assets/images/marker.png'
+           icon: 'assets/images/marker.png'
          });
     }
   }

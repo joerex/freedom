@@ -22,8 +22,10 @@ export class Audience {
 
   constructor() {
     this.video = document.getElementById('aud-vid');
-    this.video.play();
     this.audio = document.getElementById('aud-audio');
+    this.video.muted = true;
+    this.audio.muted = true;
+    this.video.play();
     this.audio.play();
   }
 

@@ -41,7 +41,7 @@ export class Load {
         size: 3300
       },
       {
-        uri: 'https://s3.amazonaws.com/project-freedom/Globatron_Video_1_Final_2_23RF.mp4',
+        uri: 'assets/video/Globatron_Video_1_Final_Small.mp4',
         type: 'video',
         size: 12800
       },
@@ -51,7 +51,7 @@ export class Load {
         size: 3700
       },
       {
-        uri: 'assets/video/STOCK_TICKER_LOOP_FINAL.mp4',
+        uri: 'assets/video/STOCK_TICKER_LOOP_FINAL_SMALL.mp4',
         type: 'video',
         size: 4000
       },

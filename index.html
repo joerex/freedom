@@ -13,19 +13,21 @@
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
     <script src="node_modules/angular2/bundles/http.dev.js"></script>
     <script>
-      System.config({
-        packages: {
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
+      if (window.innerWidth >= 1024) {
+        System.config({
+          packages: {
+            app: {
+              format: 'register',
+              defaultExtension: 'js'
+            }
           }
-        }
-      });
-      System.import('app/boot')
-            .then(null, console.error.bind(console));
+        });
+        System.import('app/boot')
+              .then(null, console.error.bind(console));
+      }
     </script>
   </head>
   <body>
-    <app><img id="preload" src="http://jdreckley.cachefly.net/freedom/assets/images/loading-screen.jpg" /></app>
+    <app><img id="preload" src="assets/images/loading-screen.jpg" /></app>
   </body>
 </html>

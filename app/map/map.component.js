@@ -29,6 +29,7 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                     this.load();
                     this.audio = document.getElementById('map-audio');
                     this.audio.play();
+                    this.scroller = document.getElementById('scroller');
                     this.scrollText = document.getElementById('map-text');
                     this.scrollPosition = 50;
                     var _this = this;
@@ -36,7 +37,7 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                 }
                 Map.prototype.scroll = function () {
                     if (this.scrollPosition < -this.scrollText.clientWidth) {
-                        this.scrollPosition = 50;
+                        this.scrollPosition = this.scroller.clientWidth;
                     }
                     else {
                         this.scrollPosition -= 3;
@@ -61,7 +62,7 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                         var marker = new google.maps.Marker({
                             position: new google.maps.LatLng(this.data.lastLat, this.data.lastLon),
                             map: map,
-                            icon: 'http://jdreckley.cachefly.net/freedom/assets/images/marker.png'
+                            icon: 'assets/images/marker.png'
                         });
                     }
                 };

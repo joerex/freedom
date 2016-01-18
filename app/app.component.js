@@ -50,6 +50,7 @@ System.register(['angular2/core', 'angular2/common', './load/load.component', '.
                     console.log('Freedom -------------');
                     this.bgStarted = false;
                     this.showHeader = false;
+                    this.muted = false;
                     this.status = 'loading';
                     data.load();
                     this._router.subscribe(function (route) {
@@ -58,6 +59,12 @@ System.register(['angular2/core', 'angular2/common', './load/load.component', '.
                         if (route != '' && route != 'intro') {
                             _this.showHeader = true;
                             _this.background();
+                            if (_this.muted) {
+                                _this.mute('on');
+                            }
+                            else {
+                                _this.mute('off');
+                            }
                         }
                     });
                     var _app = this;
@@ -83,10 +90,35 @@ System.register(['angular2/core', 'angular2/common', './load/load.component', '.
                         this.bgStarted = true;
                     }
                 };
+                AppComponent.prototype.mute = function (command) {
+                    var audio = document.getElementsByTagName('audio');
+                    var video = document.getElementsByTagName('video');
+                    if (command === 'toggle') {
+                        this.muted = this.muted === true ? false : true;
+                    }
+                    if (command === 'on') {
+                        this.muted = true;
+                    }
+                    if (command === 'off') {
+                        this.muted = false;
+                    }
+                    if (video.length > 0) {
+                        for (var i = 0; i < video.length; i++) {
+                            console.log('muting');
+                            video[i].muted = Boolean(this.muted);
+                        }
+                    }
+                    if (audio.length > 0) {
+                        for (var i = 0; i < audio.length; i++) {
+                            console.log('muting');
+                            audio[i].muted = Boolean(this.muted);
+                        }
+                    }
+                };
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        template: "\n      <div class=\"{{status}}\">\n\n        <router-outlet (navigate)=\"changeRoute($event)\"></router-outlet>\n\n        <div id=\"background\">\n          <video width=\"100%\" height=\"100%\" autoplay loop id=\"bgvid\">\n            <source src=\"\" type=\"video/mp4\">\n          </video>\n        </div>\n\n        <div id=\"header\" [ngClass]=\"{active: showHeader}\">\n          <div class=\"navbar\">\n            <ul id=\"navigation\" class=\"nav navbar-nav\">\n              <li>\n                <a class=\"home\"\n                   [ngClass]=\"{active: active === 'scoreboard'}\"\n                   (click)=\"navigate('Scoreboard')\">\n                </a>\n              </li>\n              <li>\n                <a class=\"audience\"\n                   [ngClass]=\"{active: active === 'audience'}\"\n                   (click)=\"navigate('Audience')\">\n                </a>\n              </li>\n              <li>\n                <a class=\"map\"\n                   [ngClass]=\"{active: active === 'stadium'}\"\n                   (click)=\"navigate('Map')\">\n                </a>\n              </li>\n            </ul>\n          </div>\n        </div>\n\n      </div><!-- app-wrap -->\n    ",
+                        template: "\n      <div class=\"{{status}}\">\n\n        <router-outlet (navigate)=\"changeRoute($event)\"></router-outlet>\n\n        <div id=\"background\">\n          <video width=\"100%\" height=\"100%\" autoplay loop id=\"bgvid\">\n            <source src=\"\" type=\"video/mp4\">\n          </video>\n        </div>\n\n        <div id=\"header\" [ngClass]=\"{active: showHeader}\">\n          <div class=\"navbar\">\n            <ul id=\"navigation\" class=\"nav navbar-nav\">\n              <li>\n                <a class=\"home\"\n                   [ngClass]=\"{active: active === 'scoreboard'}\"\n                   (click)=\"navigate('Scoreboard')\">\n                </a>\n              </li>\n              <li>\n                <a class=\"audience\"\n                   [ngClass]=\"{active: active === 'audience'}\"\n                   (click)=\"navigate('Audience')\">\n                </a>\n              </li>\n              <li>\n                <a class=\"map\"\n                   [ngClass]=\"{active: active === 'stadium'}\"\n                   (click)=\"navigate('Map')\">\n                </a>\n              </li>\n            </ul>\n          </div>\n          <a class=\"mute\"\n             [ngClass]=\"{muted : muted}\"\n             (click)=\"mute('toggle')\"></a>\n        </div>\n\n      </div><!-- app-wrap -->\n    ",
                         directives: [intro_component_1.Intro, common_1.NgClass, router_1.ROUTER_DIRECTIVES],
                         providers: [data_service_1.DataService]
                     }),

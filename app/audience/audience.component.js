@@ -22,8 +22,10 @@ System.register(['angular2/core', 'rxjs/Rx'], function(exports_1) {
             Audience = (function () {
                 function Audience() {
                     this.video = document.getElementById('aud-vid');
-                    this.video.play();
                     this.audio = document.getElementById('aud-audio');
+                    this.video.muted = true;
+                    this.audio.muted = true;
+                    this.video.play();
                     this.audio.play();
                 }
                 Audience.prototype.routerOnActivate = function (next, prev) {
