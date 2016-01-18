@@ -8,5 +8,6 @@ import {DataService} from './data/data.service';
 bootstrap(AppComponent, [
   ROUTER_PROVIDERS,
   HTTP_PROVIDERS,
+  provide(LocationStrategy, {useClass: HashLocationStrategy}),
   DataService
 ]);
