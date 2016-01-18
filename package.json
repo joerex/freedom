@@ -23,7 +23,7 @@
     "tsc:w": "tsc -w",
     "lite": "lite-server",
     "start": "npm run lite",
-    "static": "static -p 3333 ./"
+    "serve": "static -p 3333 ./"
   },
   "author": "Joe Reckley",
   "license": "ISC"
