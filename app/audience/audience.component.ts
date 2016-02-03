@@ -6,11 +6,11 @@ import {ComponentInstruction} from 'angular2/router';
     selector: 'audience',
     template: ` <div id="audience">
                   <video id="aud-vid" width="100%" height="100%" autoplay loop>
-                    <source src="https://s3.amazonaws.com/project-freedom/assets/video/Audience_Loop_Final_3.mp4" type="video/mp4">
+                    <source src="http://s3.amazonaws.com/project-freedom/assets/video/Audience_Loop_Final_3.mp4" type="video/mp4">
                   </video>
                   <audio id="aud-audio" autoplay loop>
-                    <source src="https://s3.amazonaws.com/project-freedom/assets/audio/Audience_Audio_Final.ogg" type="audio/ogg" />
-                    <source src="https://s3.amazonaws.com/project-freedom/assets/audio/Audience_Audio_Final.mp3" type="audio/mpeg" />
+                    <source src="http://s3.amazonaws.com/project-freedom/assets/audio/Audience_Audio_Final.ogg" type="audio/ogg" />
+                    <source src="http://s3.amazonaws.com/project-freedom/assets/audio/Audience_Audio_Final.mp3" type="audio/mpeg" />
                   </audio>
                 </div>
               `

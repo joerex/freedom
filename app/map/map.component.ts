@@ -14,8 +14,8 @@ import {DataService} from '../data/data.service';
           </div>
         </div>
         <audio id="map-audio" autoplay loop>
-          <source src="https://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.ogg" type="audio/ogg" />
-          <source src="https://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.mp3" type="audio/mpeg" />
+          <source src="http://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.ogg" type="audio/ogg" />
+          <source src="http://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.mp3" type="audio/mpeg" />
         </audio>
       </div>
     `
@@ -69,7 +69,7 @@ export class Map {
       var marker = new google.maps.Marker({
            position: new google.maps.LatLng(this.data.lastLat, this.data.lastLon),
            map: map,
-           icon: 'https://s3.amazonaws.com/project-freedom/assets/images/marker.png'
+           icon: 'http://s3.amazonaws.com/project-freedom/assets/images/marker.png'
          });
     }
   }

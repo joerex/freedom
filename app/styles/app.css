@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'times_squareregular';
-  src: url("fonts/times_sq-webfont.eot");
-  src: url("fonts/times_sq-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/times_sq-webfont.woff2") format("woff2"), url("fonts/times_sq-webfont.woff") format("woff"), url("fonts/times_sq-webfont.ttf") format("truetype"), url("fonts/times_sq-webfont.svg#times_squareregular") format("svg");
+  src: url("http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.eot");
+  src: url("http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.eot?#iefix") format("embedded-opentype"), url("http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.woff2") format("woff2"), url("http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.woff") format("woff"), url("http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.ttf") format("truetype"), url("http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.svg#times_squareregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 html {
@@ -137,7 +137,7 @@ app {
       background-position: center center;
       border-radius: 20px;
       box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
-      background-image: url(../../assets/images/speaker-trans.png);
+      background-image: url(http://s3.amazonaws.com/project-freedom/assets/images/speaker-trans.png);
       background-color: rgba(0, 0, 0, 0.4); }
       #header .mute.active {
         background-color: #960707; }
@@ -169,21 +169,21 @@ app {
             border-radius: 20px;
             box-shadow: 0 0 40px rgba(255, 255, 255, 0.4); }
             #header .navbar ul li a.home {
-              background-image: url(../../assets/images/home-trans.png);
+              background-image: url(http://s3.amazonaws.com/project-freedom/assets/images/home-trans.png);
               background-color: rgba(0, 0, 0, 0.4); }
               #header .navbar ul li a.home.active {
                 background-color: #960707; }
               #header .navbar ul li a.home:hover {
                 background-color: #540404; }
             #header .navbar ul li a.audience {
-              background-image: url(../../assets/images/audience-trans.png);
+              background-image: url(http://s3.amazonaws.com/project-freedom/assets/assets/images/audience-trans.png);
               background-color: rgba(0, 0, 0, 0.4); }
               #header .navbar ul li a.audience.active {
                 background-color: #960707; }
               #header .navbar ul li a.audience:hover {
                 background-color: #540404; }
             #header .navbar ul li a.map {
-              background-image: url(../../assets/images/map-trans.png);
+              background-image: url(http://s3.amazonaws.com/project-freedom/assets/images/map-trans.png);
               background-color: rgba(0, 0, 0, 0.4); }
               #header .navbar ul li a.map.active {
                 background-color: #960707; }
@@ -194,7 +194,7 @@ app {
     overflow: auto;
     width: 100%;
     height: 100%;
-    background: url(../../assets/images/loading-screen.jpg) no-repeat center center; }
+    background: url(http://s3.amazonaws.com/project-freedom/assets/images/loading-screen.jpg) no-repeat center center; }
     #load-screen .container {
       position: relative;
       top: 50%; }
@@ -226,7 +226,7 @@ app {
     padding: 0;
     overflow: auto;
     box-sizing: border-box;
-    background-image: url(../../assets/images/globatron/GLOBATRON_SCOREBOARD.png), url(../../assets/images/globatron/GLOBATRON_WALL_Top.png), url(../../assets/images/globatron/GLOBATRON_WALL.jpg);
+    background-image: url(http://s3.amazonaws.com/project-freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png), url(http://s3.amazonaws.com/project-freedom/assets/images/globatron/GLOBATRON_WALL_Top.png), url(http://s3.amazonaws.com/project-freedom/assets/images/globatron/GLOBATRON_WALL.jpg);
     background-repeat: no-repeat, repeat-x, repeat-x;
     background-size: 871px, 1590px auto, 1590px auto;
     background-position: center 112px, center 521px, center 526px;
@@ -317,7 +317,7 @@ app {
   #map-wrapper {
     height: 100%;
     overflow: auto;
-    background: url(../../assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
+    background: url(http://s3.amazonaws.com/project-freedom/assets/images/Stadium_view_Final_1.jpg) no-repeat center center;
     background-size: 1540px;
     -webkit-transition: all 400ms ease;
     -moz-transition: all 400ms ease;
