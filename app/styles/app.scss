@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'times_squareregular';
-    src: url('http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.eot');
-    src: url('http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.woff2') format('woff2'),
-         url('http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.woff') format('woff'),
-         url('http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.ttf') format('truetype'),
-         url('http://s3.amazonaws.com/project-freedom/assets/fonts/times_sq-webfont.svg#times_squareregular') format('svg');
+    src: url('fonts/times_sq-webfont.eot');
+    src: url('fonts/times_sq-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/times_sq-webfont.woff2') format('woff2'),
+         url('fonts/times_sq-webfont.woff') format('woff'),
+         url('fonts/times_sq-webfont.ttf') format('truetype'),
+         url('fonts/times_sq-webfont.svg#times_squareregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -243,7 +243,7 @@ app {
             }
 
             &.audience {
-              background-image:url(http://s3.amazonaws.com/project-freedom/assets/assets/images/audience-trans.png);
+              background-image:url(http://s3.amazonaws.com/project-freedom/assets/images/audience-trans.png);
               background-color: rgba(0,0,0,.4);
 
               &.active {
