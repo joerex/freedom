@@ -46,7 +46,7 @@ System.register(['angular2/core', 'angular2/common', './load/load.component', '.
                     this._router = _router;
                     this.elem = elem;
                     this.data = data;
-                    this.bgSrc = 'http://s3.amazonaws.com/project-freedom/assets/video/Background_Sky_Final.mp4';
+                    this.bgSrc = 'http://s3.amazonaws.com/project-freedom/assets/video/Background_Sky_Final_Small.mp4';
                     console.log('Freedom -------------');
                     this.bgStarted = false;
                     this.showHeader = false;

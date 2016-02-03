@@ -38,7 +38,7 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
                             size: 4400
                         },
                         {
-                            uri: 'http://s3.amazonaws.com/project-freedom/assets/video/Background_Sky_Final.mp4',
+                            uri: 'http://s3.amazonaws.com/project-freedom/assets/video/Background_Sky_Final_Small.mp4',
                             type: 'video',
                             size: 3300
                         },

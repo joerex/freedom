@@ -21,7 +21,7 @@ export class DataService {
   }
 
   endpoint() {
-    return 'http://spreadsheets.google.com/feeds/list/' +
+    return 'https://spreadsheets.google.com/feeds/list/' +
             this.sheetid +
             '/od6/public/values?alt=json';
   }

@@ -25,7 +25,7 @@ System.register(['angular2/core', 'angular2/http'], function(exports_1) {
                     // this.load();
                 }
                 DataService.prototype.endpoint = function () {
-                    return 'http://spreadsheets.google.com/feeds/list/' +
+                    return 'https://spreadsheets.google.com/feeds/list/' +
                         this.sheetid +
                         '/od6/public/values?alt=json';
                 };
