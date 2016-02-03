@@ -26,47 +26,47 @@ export class Load {
   constructor( public _router : Router, public elem : ElementRef ) {
     this.assets = [
       {
-        uri: 'assets/images/loading-screen.jpg',
+        uri: 'https://s3.amazonaws.com/project-freedom/assets/images/loading-screen.jpg',
         type: 'image',
         size: 33
       },
       {
-        uri: 'assets/video/intro.mp4',
+        uri: 'https://s3.amazonaws.com/project-freedom/assets/video/intro.mp4',
         type: 'video',
         size: 4400
       },
       {
-        uri: 'assets/video/Background_Sky_Final.mp4',
+        uri: 'https://s3.amazonaws.com/project-freedom/assets/video/Background_Sky_Final.mp4',
         type: 'video',
         size: 3300
       },
       {
-        uri: 'assets/video/Globatron_Video_1_Final_Small.mp4',
+        uri: 'https://s3.amazonaws.com/project-freedom/assets/video/Globatron_Video_1_Final_Small_b.mp4',
         type: 'video',
         size: 12800
       },
       {
-        uri: 'assets/video/Audience_Loop_Final_3.mp4',
+        uri: 'https://s3.amazonaws.com/project-freedom/assets/video/Audience_Loop_Final_3.mp4',
         type: 'video',
         size: 3700
       },
       {
-        uri: 'assets/video/STOCK_TICKER_LOOP_FINAL_SMALL.mp4',
+        uri: 'https://s3.amazonaws.com/project-freedom/assets/video/STOCK_TICKER_LOOP_FINAL_SMALL.mp4',
         type: 'video',
         size: 4000
       },
       {
-        uri: 'assets/images/globatron/GLOBATRON_SCOREBOARD.png',
+        uri: 'https://s3.amazonaws.com/project-freedom/assets/images/globatron/GLOBATRON_SCOREBOARD.png',
         type: 'image',
         size: 456
       },
       {
-        uri: 'assets/images/globatron/GLOBATRON_WALL_Top.png',
+        uri: 'https://s3.amazonaws.com/project-freedom/assets/images/globatron/GLOBATRON_WALL_Top.png',
         type: 'image',
         size: 1800
       },
       {
-        uri: 'assets/images/globatron/GLOBATRON_WALL.jpg',
+        uri: 'https://s3.amazonaws.com/project-freedom/assets/images/globatron/GLOBATRON_WALL.jpg',
         type: 'image',
         size: 1800
       }

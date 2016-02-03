@@ -28,6 +28,6 @@ export class Intro {
       elem.nativeElement.dispatchEvent(event);
       _app._router.navigate( ['Scoreboard'] );
     });
-    this.src = 'assets/video/intro.mp4';
+    this.src = 'https://s3.amazonaws.com/project-freedom/assets/video/intro.mp4';
   }
 }

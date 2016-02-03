@@ -34,7 +34,7 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1) {
                         elem.nativeElement.dispatchEvent(event);
                         _app._router.navigate(['Scoreboard']);
                     });
-                    this.src = 'assets/video/intro.mp4';
+                    this.src = 'https://s3.amazonaws.com/project-freedom/assets/video/intro.mp4';
                 }
                 Intro = __decorate([
                     core_1.Component({
