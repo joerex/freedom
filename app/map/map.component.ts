@@ -13,7 +13,7 @@ import {DataService} from '../data/data.service';
             <span id="map-text">{{data.mapTicker}}</span>
           </div>
         </div>
-        <audio id="map-audio" autoplay loop>
+        <audio id="map-audio" autoplay preload loop>
           <source src="http://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.ogg" type="audio/ogg" />
           <source src="http://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.mp3" type="audio/mpeg" />
         </audio>

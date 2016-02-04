@@ -18,7 +18,7 @@ import {DataService} from '../data/data.service';
                       </div>
                       <!-- movie -->
                       <div class="video">
-                        <video id="jumbo-main" autoplay loop>
+                        <video id="jumbo-main" autoplay preload loop>
                           <source src="http://s3.amazonaws.com/project-freedom/assets/video/Globatron_Video_1_Final_Small_b.mp4" type="video/mp4">
                         </video>
                       </div>
@@ -32,7 +32,7 @@ import {DataService} from '../data/data.service';
                       <div id="scroller">
                         <span id="ticker-text">{{data.homeTicker}}</span>
                       </div>
-                      <video id="ticker" class="bg-vid" autoplay loop>
+                      <video id="ticker" class="bg-vid" autoplay preload loop>
                         <source src="http://s3.amazonaws.com/project-freedom/assets/video/STOCK_TICKER_LOOP_FINAL_SMALL.mp4" type="video/mp4">
                       </video>
                     </div>

@@ -34,12 +34,11 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1) {
                         elem.nativeElement.dispatchEvent(event);
                         _app._router.navigate(['Scoreboard']);
                     });
-                    this.src = 'http://s3.amazonaws.com/project-freedom/assets/video/intro.mp4';
                 }
                 Intro = __decorate([
                     core_1.Component({
                         selector: 'intro',
-                        template: " <div id=\"intro\">\n                  <video width=\"100%\" height=\"100%\" autoplay id=\"intro-video\">\n                    <source src=\"{{src}}\" type=\"video/mp4\">\n                  </video>\n                </div>\n              "
+                        template: " <div id=\"intro\">\n                  <video width=\"100%\" height=\"100%\" autoplay id=\"intro-video\">\n                    <source src=\"http://s3.amazonaws.com/project-freedom/assets/video/intro.mov\" type=\"video/mov\">\n                    <source src=\"http://s3.amazonaws.com/project-freedom/assets/video/intro.mp4\" type=\"video/mp4\">\n                  </video>\n                </div>\n              "
                     }), 
                     __metadata('design:paramtypes', [router_1.Router, core_1.ElementRef])
                 ], Intro);

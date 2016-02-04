@@ -6,7 +6,8 @@ import {Observable} from 'rxjs/Rx';
     selector: 'intro',
     template: ` <div id="intro">
                   <video width="100%" height="100%" autoplay id="intro-video">
-                    <source src="{{src}}" type="video/mp4">
+                    <source src="http://s3.amazonaws.com/project-freedom/assets/video/intro.mov" type="video/mov">
+                    <source src="http://s3.amazonaws.com/project-freedom/assets/video/intro.mp4" type="video/mp4">
                   </video>
                 </div>
               `
@@ -28,6 +29,5 @@ export class Intro {
       elem.nativeElement.dispatchEvent(event);
       _app._router.navigate( ['Scoreboard'] );
     });
-    this.src = 'http://s3.amazonaws.com/project-freedom/assets/video/intro.mp4';
   }
 }

@@ -76,7 +76,7 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
                 Map = __decorate([
                     core_1.Component({
                         selector: 'map',
-                        template: "\n      <div id=\"map-wrapper\">\n        <div id=\"map\"></div>\n        <div id=\"info\">\n          <div id=\"scroller\">\n            <span id=\"map-text\">{{data.mapTicker}}</span>\n          </div>\n        </div>\n        <audio id=\"map-audio\" autoplay loop>\n          <source src=\"http://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.ogg\" type=\"audio/ogg\" />\n          <source src=\"http://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.mp3\" type=\"audio/mpeg\" />\n        </audio>\n      </div>\n    "
+                        template: "\n      <div id=\"map-wrapper\">\n        <div id=\"map\"></div>\n        <div id=\"info\">\n          <div id=\"scroller\">\n            <span id=\"map-text\">{{data.mapTicker}}</span>\n          </div>\n        </div>\n        <audio id=\"map-audio\" autoplay preload loop>\n          <source src=\"http://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.ogg\" type=\"audio/ogg\" />\n          <source src=\"http://s3.amazonaws.com/project-freedom/assets/audio/Overhead_Stadium_Audio_Final.mp3\" type=\"audio/mpeg\" />\n        </audio>\n      </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [data_service_1.DataService])
                 ], Map);

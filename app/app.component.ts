@@ -16,7 +16,7 @@ import {DataService} from './data/data.service';
         <router-outlet (navigate)="changeRoute($event)"></router-outlet>
 
         <div id="background">
-          <video width="100%" height="100%" autoplay loop id="bgvid">
+          <video width="100%" height="100%" autoplay preload loop id="bgvid">
             <source src="" type="video/mp4">
           </video>
         </div>
