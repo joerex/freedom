@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/common', './load/load.component', './intro/intro.component', './scoreboard/scoreboard.component', './audience/audience.component', './about/about.component', 'angular2/router', './data/data.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/common', './load/load.component', './intro/intro.component', './scoreboard/scoreboard.component', './audience/audience.component', './map/map.component', 'angular2/router', './data/data.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/common', './load/load.component', '.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, common_1, load_component_1, intro_component_1, scoreboard_component_1, audience_component_1, about_component_1, router_1, data_service_1;
+    var core_1, common_1, load_component_1, intro_component_1, scoreboard_component_1, audience_component_1, map_component_1, router_1, data_service_1;
     var AppComponent;
     return {
         setters:[
@@ -32,8 +32,8 @@ System.register(['angular2/core', 'angular2/common', './load/load.component', '.
             function (audience_component_1_1) {
                 audience_component_1 = audience_component_1_1;
             },
-            function (about_component_1_1) {
-                about_component_1 = about_component_1_1;
+            function (map_component_1_1) {
+                map_component_1 = map_component_1_1;
             },
             function (router_1_1) {
                 router_1 = router_1_1;
@@ -129,7 +129,7 @@ System.register(['angular2/core', 'angular2/common', './load/load.component', '.
                         { path: '/intro', name: 'Intro', component: intro_component_1.Intro },
                         { path: '/scoreboard', name: 'Scoreboard', component: scoreboard_component_1.Scoreboard },
                         { path: '/audience', name: 'Audience', component: audience_component_1.Audience },
-                        { path: '/about', name: 'About', component: about_component_1.About }
+                        { path: '/stadium', name: 'Map', component: map_component_1.Map }
                     ]), 
                     __metadata('design:paramtypes', [router_1.Router, core_1.ElementRef, data_service_1.DataService])
                 ], AppComponent);
@@ -139,4 +139,3 @@ System.register(['angular2/core', 'angular2/common', './load/load.component', '.
         }
     }
 });
-//# sourceMappingURL=app.component.js.map

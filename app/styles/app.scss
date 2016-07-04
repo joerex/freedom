@@ -78,7 +78,7 @@ app {
     opacity:0;
   }
 
-  audience, map {
+  audience, map, about {
     & + #background {
       opacity:0!important;
     }
@@ -256,6 +256,19 @@ app {
             }
 
             &.map {
+              background-image:url(http://s3.amazonaws.com/project-freedom/assets/images/map-trans.png);
+              background-color: rgba(0,0,0,.4);
+
+              &.active {
+                background-color:#960707;
+              }
+
+              &:hover {
+                background-color:#540404;
+              }
+            }
+
+            &.about {
               background-image:url(http://s3.amazonaws.com/project-freedom/assets/images/map-trans.png);
               background-color: rgba(0,0,0,.4);
 
@@ -549,6 +562,9 @@ app {
     }
   }
 
+
+
+
   #map-wrapper {
     background-size:2000px;
 
@@ -561,3 +577,11 @@ app {
     }
   }
 }
+
+  #about {
+    .sidebar {
+      position: absolute;
+      left: 0;
+      background: rgba(0,0,0,0.5);
+    }
+  }

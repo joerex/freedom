@@ -164,4 +164,3 @@ System.register(['angular2/core', 'angular2/router', 'rxjs/Rx'], function(export
         }
     }
 });
-//# sourceMappingURL=load.component.js.map

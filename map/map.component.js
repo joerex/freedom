@@ -88,4 +88,3 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
         }
     }
 });
-//# sourceMappingURL=map.component.js.map

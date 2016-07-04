@@ -50,4 +50,3 @@ System.register(['angular2/core', 'angular2/router'], function(exports_1, contex
         }
     }
 });
-//# sourceMappingURL=intro.component.js.map

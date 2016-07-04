@@ -69,4 +69,3 @@ System.register(['angular2/core', 'rxjs/Rx', '../data/data.service'], function(e
         }
     }
 });
-//# sourceMappingURL=scoreboard.component.js.map
