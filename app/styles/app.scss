@@ -10,6 +10,21 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'century_gothic';
+    src: url('fonts/century-gothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'freshmen';
+    src: url('fonts/freshman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 html {
   background:black;
 }
@@ -271,7 +286,6 @@ app {
             &.about {
               background-image:url(http://s3.amazonaws.com/project-freedom/assets/images/map-trans.png);
               background-color: rgba(0,0,0,.4);
-
               &.active {
                 background-color:#960707;
               }
@@ -579,11 +593,17 @@ app {
 }
 
   #about {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
     .sidebar {
       
       .container {
-        padding: 1rem 1.25rem;
-        margin-top: 4rem;
+        padding: 1rem 1rem;
+      }
+
+      h1,h2,h3,h4, p, a {
+        font-family: 'century_gothic', sans-serif;  
       }
 
       h1 {
@@ -594,7 +614,7 @@ app {
       }
       h2 {
         margin-top: 0;
-        font-size: 2.75vw;
+        font-size: 3vw;
         margin-bottom: 0.5rem;
       }
       p {
@@ -614,6 +634,19 @@ app {
       background: rgba(0,0,0,0.95);
       img {
         width: 90%;
+        border-radius: 5px;
+      }
+      .button {
+        border: 1px solid white;
+        padding: 0.5rem 1rem;
+        margin: 1rem auto;
+        display: block;
+        max-width: 66%;
+        transition: 0.2s ease;
+        &:hover {
+          background: white;
+          color: black;
+        }
       }
     }
     #content {
@@ -624,6 +657,8 @@ app {
         justify-content: center;
         height: 100%;
         position: absolute;
+        font-family: 'freshmen', sans-serif;
+        font-size: 1.75vw;
       }
       .wrapper {
         background: rgba(0,0,0,0.45);

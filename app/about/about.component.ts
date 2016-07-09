@@ -11,8 +11,7 @@ import {ComponentInstruction} from 'angular2/router';
                       <h1>DONATE</h1>
                       <h2>TO THE CAUSE</h2>
                       <p>Dronevictory.com was produced independently by a small group of empowered patriots. Help us maintain and advance the feverish excitement of the globatron stadium by donating to the cause. We are working on turning this site into a phone app so every man, woman, and child can keep a piece of our war on terror in their pocket at all times. No strike should ever go uncelebrated! Donate to the cause and stay tuned!</p>
-                      <a href="#doante" class="button">DONATE</a>
-                      <p>GET IN TOUCH!</p>
+                      <a class="button" href="mailto:contact@dronevictory.com?subject=Donate" class="button">DONATE</a>
                       <a href="mailto:contact@dronevictory.com">CONTACT@DRONEVICTORY.COM</a>
                     </div>
                    </div>
