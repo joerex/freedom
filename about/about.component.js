@@ -38,8 +38,8 @@ System.register(['angular2/core', 'rxjs/Rx'], function(exports_1, context_1) {
                 };
                 Audience = __decorate([
                     core_1.Component({
-                        selector: 'audience',
-                        template: " <div id=\"audience\">\n                  <video id=\"aud-vid\" width=\"100%\" height=\"100%\" preload autoplay loop>\n                    <source src=\"http://s3.amazonaws.com/project-freedom/assets/video/Audience_Loop_Final_3.mp4\" type=\"video/mp4\">\n                  </video>\n                  <audio id=\"aud-audio\" autoplay preload loop>\n                    <source src=\"http://s3.amazonaws.com/project-freedom/assets/audio/Audience_Audio_Final.ogg\" type=\"audio/ogg\" />\n                    <source src=\"http://s3.amazonaws.com/project-freedom/assets/audio/Audience_Audio_Final.mp3\" type=\"audio/mpeg\" />\n                  </audio>\n                </div>\n              "
+                        selector: 'about',
+                        template: " <div id=\"audience\">\n                  <p>ABOUT PAGE</p>\n                  <video id=\"aud-vid\" width=\"100%\" height=\"100%\" preload autoplay loop>\n                    <source src=\"http://s3.amazonaws.com/project-freedom/assets/video/Audience_Loop_Final_3.mp4\" type=\"video/mp4\">\n                  </video>\n                  <audio id=\"aud-audio\" autoplay preload loop>\n                    <source src=\"http://s3.amazonaws.com/project-freedom/assets/audio/Audience_Audio_Final.ogg\" type=\"audio/ogg\" />\n                    <source src=\"http://s3.amazonaws.com/project-freedom/assets/audio/Audience_Audio_Final.mp3\" type=\"audio/mpeg\" />\n                  </audio>\n                </div>\n              "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], Audience);
@@ -49,4 +49,3 @@ System.register(['angular2/core', 'rxjs/Rx'], function(exports_1, context_1) {
         }
     }
 });
-//# sourceMappingURL=audience.component.js.map

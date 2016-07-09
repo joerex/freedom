@@ -49,4 +49,3 @@ System.register(['angular2/core', 'rxjs/Rx'], function(exports_1, context_1) {
         }
     }
 });
-//# sourceMappingURL=audience.component.js.map
