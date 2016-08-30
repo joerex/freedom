@@ -14,7 +14,7 @@ export class DataService {
   totalKills: number;
   homeTicker: string;
   mapTicker: string;
-  loaded : Boolean;
+  loaded : Boolean; 
 
   constructor( public http : Http ) {
     // this.load();

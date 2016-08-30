@@ -32,4 +32,3 @@ System.register(['angular2/platform/browser', 'angular2/core', './app.component'
         }
     }
 });
-//# sourceMappingURL=boot.js.map

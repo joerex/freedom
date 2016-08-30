@@ -4,6 +4,7 @@ import {Load} from './load/load.component';
 import {Intro} from './intro/intro.component';
 import {Scoreboard} from './scoreboard/scoreboard.component';
 import {Audience} from './audience/audience.component';
+import {About} from './about/about.component';
 import {Map} from './map/map.component';
 import {Router, RouteConfig, ROUTER_DIRECTIVES, ComponentInstruction} from 'angular2/router';
 import {DataService} from './data/data.service';
@@ -37,11 +38,17 @@ import {DataService} from './data/data.service';
                 </a>
               </li>
               <li>
+                <a class="about"
+                   [ngClass]="{active: active === 'about'}"
+                   (click)="navigate('About')">
+                </a>
+              </li>
+         <!-- <li>
                 <a class="map"
                    [ngClass]="{active: active === 'stadium'}"
                    (click)="navigate('Map')">
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
           <a class="mute"
@@ -60,7 +67,7 @@ import {DataService} from './data/data.service';
   {path:'/intro', name: 'Intro', component: Intro},
   {path:'/scoreboard', name: 'Scoreboard', component: Scoreboard},
   {path:'/audience', name: 'Audience', component: Audience},
-  {path:'/stadium', name: 'Map', component: Map}
+  {path:'/about', name: 'About', component: About}
 ])
 
 export class AppComponent {
