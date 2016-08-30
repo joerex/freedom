@@ -10,6 +10,21 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'century_gothic';
+    src: url('fonts/century-gothic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'freshmen';
+    src: url('fonts/freshman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 html {
   background:black;
 }
@@ -78,7 +93,7 @@ app {
     opacity:0;
   }
 
-  audience, map {
+  audience, map, about {
     & + #background {
       opacity:0!important;
     }
@@ -259,6 +274,18 @@ app {
               background-image:url(http://s3.amazonaws.com/project-freedom/assets/images/map-trans.png);
               background-color: rgba(0,0,0,.4);
 
+              &.active {
+                background-color:#960707;
+              }
+
+              &:hover {
+                background-color:#540404;
+              }
+            }
+
+            &.about {
+              background-image:url(http://s3.amazonaws.com/project-freedom/assets/images/map-trans.png);
+              background-color: rgba(0,0,0,.4);
               &.active {
                 background-color:#960707;
               }
@@ -549,6 +576,9 @@ app {
     }
   }
 
+
+
+
   #map-wrapper {
     background-size:2000px;
 
@@ -561,3 +591,86 @@ app {
     }
   }
 }
+
+  #about {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+    .sidebar {
+      
+      .container {
+        padding: 1rem 1rem;
+      }
+
+      h1,h2,h3,h4, p, a {
+        font-family: 'century_gothic', sans-serif;  
+      }
+
+      h1 {
+        font-size: 5vw;
+        line-height: 100%;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+      }
+      h2 {
+        margin-top: 0;
+        font-size: 3vw;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        font-size: 1vw;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.25vw;
+      }
+      color: white;
+      position: absolute;
+      float: left;
+      width: 25vw;
+      height: 100%;
+      left: 0;
+      background: rgba(0,0,0,0.95);
+      img {
+        width: 90%;
+        border-radius: 5px;
+      }
+      .button {
+        border: 1px solid white;
+        padding: 0.5rem 1rem;
+        margin: 1rem auto;
+        display: block;
+        max-width: 66%;
+        transition: 0.2s ease;
+        &:hover {
+          background: white;
+          color: black;
+        }
+      }
+    }
+    #content {
+      padding-left: 25vw;
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        position: absolute;
+        font-family: 'freshmen', sans-serif;
+        font-size: 1.75vw;
+      }
+      .wrapper {
+        background: rgba(0,0,0,0.45);
+        margin: 0 1rem;
+        padding: 2rem 0;
+        border: 2px solid white;
+        border-radius: 5px;
+        text-align: left;
+        p {
+          margin: 1rem;
+          color: white;
+        }
+      }
+    }
+  }
