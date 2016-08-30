@@ -26,14 +26,6 @@ export class DataService {
             '/od6/public/values?alt=json';
   }
 
-  total() {
-    return 102;
-  }
-
-  getStuff() {
-    return this.lastLon;
-  }
-
   load() {
     console.log('Constructing DataService');
     this.sheetid = '1JnlN7n_lGguvIJgQTA3f_tckG8wM8CyvTcbPqyZCPk8';
@@ -42,6 +34,7 @@ export class DataService {
     .map(res => res.json())
     .subscribe(
       res => {
+        console.log('DATA: data', res.feed.entry);
         this.data = res.feed.entry;
         this.lastTarget = this.data[0].gsx$target.$t;
         this.lastDate = this.data[0].gsx$date.$t;
@@ -50,7 +43,7 @@ export class DataService {
         this.lastLon = this.data[0].gsx$longitude.$t;
         this.homeTicker = this.data[0].gsx$hometicker.$t;
         this.mapTicker = this.data[0].gsx$mapticker.$t;
-        this.totalKills = this.total();
+        this.totalKills = this.data.reduce((v, d) => { return v + parseInt(d.gsx$kills.$t) }, 0);
         this.loaded = true;
       },
       err => console.log('Error: ', err),
